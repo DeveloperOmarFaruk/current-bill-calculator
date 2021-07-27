@@ -8,6 +8,9 @@ const calc = () => {
     let sSMBill = '';
     let j = '';
     let k = '';
+    let fTSMUnit = '';
+    let sTSMUnit = '';
+    let aR = '';
 
 
     let perUnit = parseFloat(tBill) / parseFloat(tUnit);
@@ -18,17 +21,24 @@ const calc = () => {
         k = j / 2;
         fSMBill = (parseFloat(fSUnit) + k) * perUnit;
         sSMBill = (parseFloat(sSUnit) + k) * perUnit;
+
+        fTSMUnit = parseFloat(fSUnit) + k;
+        sTSMUnit = parseFloat(sSUnit) + k;
+        aR = 'Add';
     } else {
         j = parseFloat(subUnitSum) - parseFloat(tUnit);
         k = j / 2;
-        fSMBill = (parseFloat(fSUnit) + k) * perUnit;
-        sSMBill = (parseFloat(sSUnit) + k) * perUnit;
+        fSMBill = (parseFloat(fSUnit) - k) * perUnit;
+        sSMBill = (parseFloat(sSUnit) - k) * perUnit;
+
+        fTSMUnit = parseFloat(fSUnit) - k;
+        sTSMUnit = parseFloat(sSUnit) - k;
+        aR = 'Remove';
 
     }
 
 
-    let fTSMUnit = parseFloat(fSUnit) + k;
-    let sTSMUnit = parseFloat(sSUnit) + k;
+
 
 
     //     document.getElementById('showData').innerHTML = `
@@ -58,7 +68,7 @@ Total Sub Unit: ${subUnitSum} Unit.<br>
 Remaining Unit: ${j} Unit. <br>
 `
     document.getElementById('showData5').innerHTML = `
-Remaining Add Unit: ${k} Unit. <br>
+Remaining ${aR} Unit: ${k} Unit. <br>
 `
     document.getElementById('showData6').innerHTML = `
 Per Unit Rate: ${perUnit} Taka. <br>
