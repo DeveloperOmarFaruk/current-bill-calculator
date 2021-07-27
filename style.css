@@ -1,0 +1,258 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+* {
+    font-family: "Roboto";
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+div.container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+    margin-top: 30px;
+    border: 1px solid whitesmoke;
+    padding: 21px;
+    border-radius: 4px;
+}
+
+h4.title {
+    text-align: center;
+    margin-bottom: 45px;
+    color: rgba(0, 38, 255, 0.8);
+}
+
+:root {
+    --omrs-color-ink-lowest-contrast: rgba(47, 60, 85, 0.18);
+    --omrs-color-ink-low-contrast: rgba(60, 60, 67, 0.3);
+    --omrs-color-ink-medium-contrast: rgba(19, 19, 21, 0.6);
+    --omrs-color-interaction: #1e4bd1;
+    --omrs-color-interaction-minus-two: rgba(73, 133, 224, 0.12);
+    --omrs-color-danger: #b50706;
+    --omrs-color-bg-low-contrast: #eff1f2;
+    --omrs-color-ink-high-contrast: #121212;
+    --omrs-color-bg-high-contrast: #ffffff;
+}
+
+.header {
+    height: 100vh;
+    background-image: linear-gradient( to right bottom, rgba(76, 216, 255, 0.8), rgba(30, 108, 217, 0.8)), url("https://images.pexels.com/photos/6964105/pexels-photo-6964105.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+}
+
+.footer {
+    height: 15vh;
+    background-image: linear-gradient( to right bottom, rgba(76, 216, 255, 0.8), rgba(30, 108, 217, 0.8));
+    background-size: cover;
+    background-position: bottom;
+    position: relative;
+    clip-path: polygon(0 0, 100% 55%, 100% 100%, 0 100%);
+}
+
+.brand-box {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
+
+.brand {
+    font-size: 20px;
+    color: Gold;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.heading-primary {
+    color: #fff;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+    margin-bottom: 30px;
+}
+
+.heading-primary-main {
+    display: block;
+    font-size: 26px;
+    font-weight: 400;
+    letter-spacing: 5px;
+}
+
+.heading-primary-sub {
+    display: block;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 7.4px;
+}
+
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all 0.2s;
+    position: relative;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-white {
+    background-color: #fff;
+    color: #777;
+    font-size: 30px;
+}
+
+.fa-angle-double-down {
+    animation: float 3s linear infinite;
+}
+
+@keyframes float {
+    0%,
+    100% {
+        transform: translateY(-0.5rem);
+    }
+    50% {
+        transform: translateY(0.5rem);
+    }
+}
+
+
+/** END: Non Openmrs CSS **/
+
+div.omrs-input-group {
+    margin-bottom: 2.5rem;
+    position: relative;
+    width: 19.4375rem;
+}
+
+
+/* Input*/
+
+.omrs-input-underlined>input,
+.omrs-input-filled>input {
+    border: none;
+    border-bottom: 0.125rem solid var(--omrs-color-ink-medium-contrast);
+    width: 100%;
+    height: 2rem;
+    font-size: 1.0625rem;
+    padding-left: 0.875rem;
+    line-height: 147.6%;
+    padding-top: 0.825rem;
+    padding-bottom: 0.5rem;
+}
+
+.omrs-input-underlined>input:focus,
+.omrs-input-filled>input:focus {
+    outline: none;
+}
+
+.omrs-input-underlined>.omrs-input-label,
+.omrs-input-filled>.omrs-input-label {
+    position: absolute;
+    top: 0.9375rem;
+    left: 0.875rem;
+    line-height: 147.6%;
+    color: var(--omrs-color-ink-medium-contrast);
+    transition: top 0.2s;
+}
+
+.omrs-input-underlined>svg,
+.omrs-input-filled>svg {
+    position: absolute;
+    top: 0.9375rem;
+    right: 0.875rem;
+    fill: var(--omrs-color-ink-medium-contrast);
+}
+
+.omrs-input-underlined>.omrs-input-helper,
+.omrs-input-filled>.omrs-input-helper {
+    font-size: 0.9375rem;
+    color: var(--omrs-color-ink-medium-contrast);
+    letter-spacing: 0.0275rem;
+    margin: 0.125rem 0.875rem;
+}
+
+.omrs-input-underlined>input:hover,
+.omrs-input-filled>input:hover {
+    background: var(--omrs-color-interaction-minus-two);
+    border-color: var(--omrs-color-ink-high-contrast);
+}
+
+.omrs-input-underlined>input:focus+.omrs-input-label,
+.omrs-input-underlined>input:valid+.omrs-input-label,
+.omrs-input-filled>input:focus+.omrs-input-label,
+.omrs-input-filled>input:valid+.omrs-input-label {
+    top: 0;
+    font-size: 0.9375rem;
+    margin-bottom: 32px;
+}
+
+.omrs-input-underlined:not(.omrs-input-danger)>input:focus+.omrs-input-label,
+.omrs-input-filled:not(.omrs-input-danger)>input:focus+.omrs-input-label {
+    color: var(--omrs-color-interaction);
+}
+
+.omrs-input-underlined:not(.omrs-input-danger)>input:focus,
+.omrs-input-filled:not(.omrs-input-danger)>input:focus {
+    border-color: var(--omrs-color-interaction);
+}
+
+.omrs-input-underlined:not(.omrs-input-danger)>input:focus~svg,
+.omrs-input-filled:not(.omrs-input-danger)>input:focus~svg {
+    fill: var(--omrs-color-ink-high-contrast);
+}
+
+.btn {
+    color: #fff;
+    background-color: #e74c3c;
+    outline: none;
+    border: 0;
+    color: #fff;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    margin-top: 50px;
+    border-radius: 2px;
+    cursor: pointer;
+    position: relative;
+}
+
+#showData1,
+#showData3,
+#showData5,
+#showData7,
+#showData9 {
+    background-color: rgba(76, 216, 255, 0.8);
+}
+
+#showData2,
+#showData4,
+#showData6,
+#showData8,
+#showData10 {
+    background-color: rgba(226, 226, 226, 0.8);
+}
+
+
+/* Footer Style */
