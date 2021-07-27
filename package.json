@@ -1,0 +1,16 @@
+{
+    "name": "current-bill-calculator",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "deploy": "gh-pages -d src"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "homepage": "https://DeveloperOmarFaruk.github.io/current-bill-calculator",
+    "dependencies": {
+        "gh-pages": "^3.2.3"
+    }
+}

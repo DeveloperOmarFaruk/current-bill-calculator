@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sub Meter Bill Calculator | Developer.OmarFaruk</title>
+    <link href="./style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="brand-box">
+            <span class="brand">Developer.OmarFaruk</span>
+        </div>
+
+        <div class="text-box">
+            <h1 class="heading-primary">
+                <span class="heading-primary-main">Electricity</span>
+                <span class="heading-primary-sub">Sub Meter Bill Calculator</span>
+            </h1>
+            <a href="#" class="btn btn-white btn-animated fa-angle-double-down ">⬇</a>
+        </div>
+    </header>
+
+
+    <div class="container">
+        <div>
+            <h4 class="title">Electricity Sub Meter Bill Calculator</h4>
+            <form>
+                <div class="omrs-input-group">
+                    <label class="omrs-input-underlined">
+                      <input type="text" required id="tBill">
+                      <span class="omrs-input-label">Input Total Bill</span>
+                    </label>
+                </div>
+                <div class="omrs-input-group">
+                    <label class="omrs-input-underlined">
+                      <input  type="text" required id="tUnit">
+                      <span class="omrs-input-label">Input Total Unit</span>
+                    </label>
+                </div>
+
+                <div class="omrs-input-group">
+                    <label class="omrs-input-underlined">
+                      <input  type="text" required id="fSUnit">
+                      <span class="omrs-input-label">1st Sub Meter Unit</span>
+                    </label>
+                </div>
+
+
+                <div class="omrs-input-group">
+                    <label class="omrs-input-underlined">
+                      <input  type="text" required id="sSUnit">
+                      <span class="omrs-input-label">2nd Sub Meter Unit</span>
+                    </label>
+                </div>
+
+                <button type="button" class="btn" onClick="calc()">submit</button>
+            </form>
+        </div>
+
+
+        <div class="show-data">
+            <p id="showData1"></p>
+            <p id="showData2"></p>
+            <p id="showData3"></p>
+            <p id="showData4"></p>
+            <p id="showData5"></p>
+            <p id="showData6"></p>
+            <p id="showData7"></p>
+            <p id="showData8"></p>
+            <p id="showData9"></p>
+            <p id="showData10"></p>
+        </div>
+
+    </div>
+
+
+    <!-- Footer Section -->
+
+    <footer class="footer">
+        <h5 style="text-align:center; padding-top: 70px">2021 &copy; Developer.OmarFaruk</h5>
+    </footer>
+    <!-- Footer Section End -->
+
+    <script src="app.js"></script>
+</body>
+
+</html>
