@@ -71,13 +71,13 @@ Remaining Unit: ${j} Unit. <br>
 Remaining ${aR} Unit: ${k} Unit. <br>
 `
     document.getElementById('showData6').innerHTML = `
-Per Unit Rate: ${perUnit} Taka. <br>
+Per Unit Rate: ${perUnit.toFixed(2)} Taka. <br>
 `
     document.getElementById('showData7').innerHTML = `
 1st sub meter total unit: ${fTSMUnit} Unit.<br>
 `
     document.getElementById('showData8').innerHTML = `
-1st sub meter bill: ${fSMBill.toFixed(2)} Taka. <br>
+1st sub meter bill: ${fSMBill.toFixed(2)} Taka.  <br>
 `
     document.getElementById('showData9').innerHTML = `
 2nd sub meter total unit: ${sTSMUnit} Unit.<br>
